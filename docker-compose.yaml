@@ -28,7 +28,7 @@ services:
       - yibanclock-bridge
 
   web:
-    image: holmosehub/yiban-django:01b6988d1ef431bbaf64b28f3d059b5b213a5909
+    image: holmosehub/yiban-django:f038f640a556af958072e1a5a87d4310deea2a58
     restart: always
     environment:
       - MYSQL_DATABASE
@@ -46,7 +46,7 @@ services:
       - yibanclock-bridge
 
   nginx:
-    image: holmosehub/yiban-nginx:01b6988d1ef431bbaf64b28f3d059b5b213a5909
+    image: holmosehub/yiban-nginx:f038f640a556af958072e1a5a87d4310deea2a58
     restart: always
     environment:
       - TZ
@@ -59,7 +59,7 @@ services:
       - yibanclock-bridge
 
   clock:
-    image: holmosehub/yiban-clock:01b6988d1ef431bbaf64b28f3d059b5b213a5909
+    image: holmosehub/yiban-clock:f038f640a556af958072e1a5a87d4310deea2a58
     environment:
       TZ: Asia/Shanghai     
     restart: always
