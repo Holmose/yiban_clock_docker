@@ -93,7 +93,7 @@ services:
       - ./:/app/
     container_name: yiban_clock
     depends_on:
-      - db
+      - web
     networks:
       - yibanclock-bridge
 
