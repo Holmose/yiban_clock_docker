@@ -75,9 +75,7 @@ services:
       - yibanclock-bridge
 
   clock:
-    image: $REGISTRY/yiban-clock:$SHATAG
-    environment:
-      TZ: Asia/Shanghai     
+    image: $REGISTRY/yiban-clock:$SHATAG  
     restart: always
     environment:
       - MYSQL_DATABASE
@@ -88,6 +86,9 @@ services:
       - MYSQL_PORT
       - ADMIN_PATH
       - TZ
+      - MAIL_USER
+      - MAIL_PASS
+      - MAIL_HOST
     volumes:
       - ./:/app/
     container_name: yiban_clock
