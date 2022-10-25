@@ -59,9 +59,7 @@ services:
       - yibanclock-bridge
 
   clock:
-    image: holmosehub/yiban-clock:9fadeef92050d5f9baf5084bd8781604f3dd3107
-    environment:
-      TZ: Asia/Shanghai     
+    image: holmosehub/yiban-clock:9fadeef92050d5f9baf5084bd8781604f3dd3107  
     restart: always
     environment:
       - MYSQL_DATABASE
@@ -72,6 +70,9 @@ services:
       - MYSQL_PORT
       - ADMIN_PATH
       - TZ
+      - MAIL_USER
+      - MAIL_PASS
+      - MAIL_HOST
     volumes:
       - ./:/app/
     container_name: yiban_clock
