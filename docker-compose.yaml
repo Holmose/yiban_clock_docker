@@ -74,7 +74,7 @@ services:
       - MAIL_PASS
       - MAIL_HOST
     volumes:
-      - ./:/app/
+      - ./config:/app/config
     container_name: yiban_clock
     depends_on:
       - web
